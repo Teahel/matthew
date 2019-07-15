@@ -32,6 +32,8 @@ public class Redis {
         jedis.set("one","1");
     }
 
+
+
     /**
      * 没用过
      */
