@@ -10,11 +10,8 @@ package org.matthew;
 public class Sort {
    public static void main(String args[]){
        Sort sort=new Sort();
-       //sort.SortBymaopao();//冒泡排序
-       sort.SortByxuanze();//选择排序
    }
    //冒泡排序
-   public void SortBymaopao(){
        int arr[]={1,-10,-5,2,9,4,0,0,3};
        for(int i=0;i<arr.length-1;i++){
            for(int j=0;j<arr.length-1-i;j++){
@@ -31,7 +28,6 @@ public class Sort {
    }
 
    //选择排序
-   public void SortByxuanze(){
        int arr[]={1,-10,-5,2,9,4,0,0,3};
        for(int i=0;i<arr.length-1;i++){
            for(int j=i+1;j<arr.length;j++){
