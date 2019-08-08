@@ -8,13 +8,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@EnableEurekaClient
+/**
+ * @author : Matthew
+ * @Date: 2019/8/8
+ * @Time: 21:54
+ * @Description: 消费者2
+ */
 @SpringBootApplication
-public class EurekaclientApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(EurekaclientApplication.class, args);
+@EnableEurekaClient
+@RestController
+public class Eurekaclient2Application {
+    public static void main(String []args){
+      SpringApplication.run(Eurekaclient2Application.class,args);
     }
 
     @Value("${server.port}")
