@@ -1,0 +1,9 @@
+##×Ô¶¨ÊôĞÔ
+my:
+  name: matthew
+  age: 24
+  number: ${random.int}
+  uuid: ${random.uuid}
+  max: ${random.int(10)}
+  value: ${random.value}
+  print: show ${my.name}
