@@ -60,6 +60,5 @@ public class AccountController {
         }else {
             return "fail";
         }
-
     }
 }
