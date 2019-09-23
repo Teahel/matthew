@@ -11,4 +11,14 @@ import com.matthew.entity.User;
  * @Version: 1.0
  */
 public interface UserService extends IService<User> {
+
+    /**
+     * 登陆
+     * @param username 账户
+     * @param password 密码
+     * @return 若无该账户则返回 null
+     *         若存在该账户则返回 true
+     */
+     User login(String username,String password);
+
 }
