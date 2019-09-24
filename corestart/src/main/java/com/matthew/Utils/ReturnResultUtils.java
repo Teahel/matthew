@@ -18,38 +18,38 @@ public class ReturnResultUtils extends HashMap<String,Object> {
         put("msg", "success");
     }
 
-    public static ReturnResultUtils error(String msg) {
+    public  ReturnResultUtils error(String msg) {
      ReturnResultUtils r=new ReturnResultUtils();
      r.put("msg",msg);
      return  r;
     }
 
-    public static ReturnResultUtils error(int code, String msg) {
+    public  ReturnResultUtils error(int code, String msg) {
         ReturnResultUtils r = new ReturnResultUtils();
         r.put("code", code);
         r.put("msg", msg);
         return r;
     }
 
-    public static ReturnResultUtils ok(String msg) {
+    public  ReturnResultUtils ok(String msg) {
         ReturnResultUtils r = new ReturnResultUtils();
         r.put("msg", msg);
         return r;
     }
 
-    public static ReturnResultUtils ok(Map<String, Object> map) {
+    public  ReturnResultUtils ok(Map<String, Object> map) {
         ReturnResultUtils r = new ReturnResultUtils();
         r.putAll(map);
         return r;
     }
 
-    public static ReturnResultUtils ok() {
+    public  ReturnResultUtils ok() {
         return new ReturnResultUtils();
     }
 
 
     @Override
-    public ReturnResultUtils put(String key, Object value) {
+    public  ReturnResultUtils put(String key, Object value) {
         super.put(key, value);
         return this;
     }

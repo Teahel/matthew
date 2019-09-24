@@ -1,10 +1,9 @@
 package com.matthew.controller;
 
-import com.matthew.entity.User;
+import com.matthew.Utils.ReturnResultUtils;
 import com.matthew.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,31 +25,28 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
-    @RequestMapping("/login")
-    public User login(@RequestBody User user){
-        User loginUser = new User();
-
-        return loginUser;
-    }
-
     @RequestMapping( value = "/login",method = RequestMethod.GET)
-    public String login(HttpServletRequest request){
+    public ReturnResultUtils login(HttpServletRequest request){
+        ReturnResultUtils resultUtils=new ReturnResultUtils();
+
         String username =request.getParameter("username");
         String password =request.getParameter("password");
 
         if (StringUtils.isEmpty(userService.login(username,password))){
-            request.getSession();
+            ReturnResultUtils returnResultUtils=new ReturnResultUtils();
+            resultUtils=returnResultUtils.error(111,"账户或者密码错误！");
         } else {
-            return "faild";
+            request.getSession();
+            resultUtils.put("code","000");
+            resultUtils.put("msg","登录成功！");
         }
-        return "success";
+        return resultUtils;
     }
 
 
     /**
      * 判断用户的session是否有效（在同一个浏览器中，同一个域中，每次Request请求，都会带上Session）
-     * @param request
+     * @param request  //其他的请求在请求前，先请求是否session有效
      * @return
      */
     @RequestMapping(value = "isValid",method = RequestMethod.GET)

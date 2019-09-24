@@ -5,46 +5,47 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
  * @Author: L.T.J
  * @project core_start
  * @package com.matthew.entity
- * @CreateDate: 2019/9/19 11:28
+ * @CreateDate: 2019/9/24 13:58
  * @Version: 1.0
  */
 @Data
-@TableName("user")
-public class User implements Serializable {
+@TableName("article")
+public class Article implements Serializable {
     private static final long serialVersionUID = 1L;
     /**
-     * userid 主键
+     * 主键
      */
     @TableId(type=IdType.UUID)
-    private  String userid;
-    /**
-     * 账户姓名
-     */
-    @NotNull(message = "账户不能为空")
-    private  String username;
-    /**
-     * 密码
-     */
-    @NotNull(message = "密码不能为空")
-    private  String password;
-    /**
-     * email
-     */
-    private  String email;
-    /**
-     * github地址
-     */
-    private  String githubaddress;
+    private String articleid;
 
     /**
-     * 头像地址
+     * 标题
      */
-    private  String imageaddress;
+    private String title;
+
+    /**
+     * 内容
+     */
+    private String content;
+
+    /**
+     *上传时间
+     */
+    private String createtime;
+
+    /**
+     * 上传账户
+     */
+    private String userid;
+
+    /**
+     * 转载链接
+     */
+    private String reprintlink;
 }

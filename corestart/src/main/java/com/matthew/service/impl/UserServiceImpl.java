@@ -30,13 +30,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
     public User login(String username, String password) {
         QueryWrapper queryWrapper =new QueryWrapper();
         queryWrapper.eq("username",username);
-        User user=baseMapper.selectOne(queryWrapper);
+        User user=this.baseMapper.selectOne(queryWrapper);
         if (StringUtils.isEmpty(user)) {
             return null;
         }
-
         //md5解密
-        if(MD5Utils.md5(password,user.getPassWord())){
+        if(MD5Utils.md5(password,user.getPassword())){
             return  user;
         }
         return null;
