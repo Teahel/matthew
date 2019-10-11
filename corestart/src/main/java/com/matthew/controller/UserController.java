@@ -34,7 +34,7 @@ public class UserController {
 
         if (StringUtils.isEmpty(userService.login(username,password))){
             ReturnResultUtils returnResultUtils=new ReturnResultUtils();
-            resultUtils=returnResultUtils.error(111,"账户或者密码错误！");
+            resultUtils=returnResultUtils.error(500,"账户或者密码错误！");
         } else {
             request.getSession();
             resultUtils.put("code","000");
