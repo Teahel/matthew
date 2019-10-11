@@ -8,7 +8,7 @@ import lombok.Data;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
-/**
+/**用户信息
  * @Author: L.T.J
  * @project core_start
  * @package com.matthew.entity

@@ -1,6 +1,6 @@
 package com.matthew.entity;
 
-/**
+/**角色
  * @Author: L.T.J
  * @project core_start
  * @package com.matthew.entity

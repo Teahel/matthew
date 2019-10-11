@@ -7,7 +7,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 
-/**
+/**文章类型
  * @Author: L.T.J
  * @project core_start
  * @package com.matthew.entity
