@@ -18,6 +18,7 @@ import java.io.Serializable;
 @Data
 @TableName("webinformation")
 public class WebInformation implements Serializable {
+
     private static final long serialVersionUID = 1L;
 
     /**
