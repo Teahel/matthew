@@ -15,4 +15,16 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ArticleTypleServiceImpl extends ServiceImpl<ArticleTypeMapper,ArticleType> implements ArticleTypeService {
+
+    /**
+     * 文章类型名称
+     * @param typeName
+     * @return 保存结果
+     */
+    @Override
+    public boolean saveArticleType(String typeName) {
+        ArticleType articleType = new ArticleType();
+        articleType.setTypename(typeName);
+        return this.save(articleType);
+    }
 }

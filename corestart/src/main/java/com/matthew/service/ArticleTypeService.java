@@ -11,4 +11,10 @@ import com.matthew.entity.ArticleType;
  * @Version: 1.0
  */
 public interface ArticleTypeService extends IService<ArticleType> {
+    /**
+     * 文章类型名称
+     * @param typeName
+     * @return 保存结果
+     */
+    boolean saveArticleType(String typeName);
 }
