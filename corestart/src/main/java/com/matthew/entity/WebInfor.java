@@ -43,6 +43,11 @@ public class WebInfor implements Serializable {
     private String madeName;
 
     /**
+     * 版本
+     */
+    private String version;
+
+    /**
      * 代码地址
      */
     private String codeAddress;
