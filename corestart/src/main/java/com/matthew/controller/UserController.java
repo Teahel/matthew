@@ -27,7 +27,6 @@ public class UserController {
 
     @RequestMapping( value = "/login",method = RequestMethod.GET)
     public ReturnResultUtils login(HttpServletRequest request){
-
         ReturnResultUtils resultUtils=new ReturnResultUtils();
         String username =request.getParameter("username");
         String password =request.getParameter("password");

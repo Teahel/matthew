@@ -12,6 +12,8 @@
     <artifactId>core_start</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>core_start</name>
+    <packaging>war</packaging>
+
     <description>core_startV1.0</description>
 
     <properties>
@@ -57,6 +59,12 @@
             <version>3.2.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>   <!--表示生成war包的时候不要将tomcat打包进去-->
+        </dependency>
+
 
         <!--spring boot 与redis应用基本环境配置 -->
         <dependency>
@@ -69,10 +77,10 @@
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-data-redis</artifactId>
         </dependency>
-
     </dependencies>
 
     <build>
+        <finalName>core_start</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
