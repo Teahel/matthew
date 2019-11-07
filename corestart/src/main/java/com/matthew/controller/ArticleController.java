@@ -5,6 +5,8 @@ import com.matthew.entity.Article;
 import com.matthew.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
@@ -28,6 +30,7 @@ public class ArticleController {
      * 查询所有文章内容
      * @return 所有文章结果
      */
+    @RequestMapping( value = "/findList",method = RequestMethod.POST)
     public ReturnResultUtils findArticleLists(){
         List<Article> list = articleService.findArticleLists();
         ReturnResultUtils returnResultUtils = new ReturnResultUtils();
