@@ -20,7 +20,8 @@ import java.util.Map;
  * @CreateDate: 2019/9/24 14:46
  * @Version: 1.0
  */
-@RestController("/article")
+@RestController
+@RequestMapping ("/article")
 public class ArticleController {
 
     @Autowired
@@ -31,9 +32,8 @@ public class ArticleController {
      * @return 所有文章结果
      */
     @RequestMapping( value = "/findList",method = RequestMethod.POST)
-    public ReturnResultUtils findArticleLists(){
+    public Map<String,Object> findArticleLists(){
         List<Article> list = articleService.findArticleLists();
-        ReturnResultUtils returnResultUtils = new ReturnResultUtils();
         Map<String,Object> map = new HashMap<>();
         if (list!=null) {
             map.put("list",list);
@@ -43,8 +43,7 @@ public class ArticleController {
             map.put("code",500);
             map.put("msg","查询失败");
         }
-        returnResultUtils.ok(map);
-        return returnResultUtils;
+        return map;
     }
 
 }

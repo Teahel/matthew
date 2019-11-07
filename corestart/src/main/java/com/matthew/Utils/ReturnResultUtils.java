@@ -13,40 +13,29 @@ import java.util.Map;
 public class ReturnResultUtils extends HashMap<String,Object> {
     private static final long serialVersionUID = 1L;
 
-    public ReturnResultUtils() {
-        put("code", 0);
-        put("msg", "success");
-    }
+    public ReturnResultUtils (){
 
-    public  ReturnResultUtils error(String msg) {
-     ReturnResultUtils r=new ReturnResultUtils();
-     r.put("msg",msg);
-     return  r;
     }
-
     public  ReturnResultUtils error(int code, String msg) {
         ReturnResultUtils r = new ReturnResultUtils();
-        r.put("code", code);
-        r.put("msg", msg);
+        put("code", 500);
+        put("msg", msg);
         return r;
     }
 
-    public  ReturnResultUtils ok(String msg) {
+    public  ReturnResultUtils ok(int code,String msg) {
         ReturnResultUtils r = new ReturnResultUtils();
+        r.put("code", 200);
         r.put("msg", msg);
         return r;
     }
 
     public  ReturnResultUtils ok(Map<String, Object> map) {
         ReturnResultUtils r = new ReturnResultUtils();
-        r.putAll(map);
+        put("msg",map.get("msg"));
+        put("list",map.get("list"));
         return r;
     }
-
-    public  ReturnResultUtils ok() {
-        return new ReturnResultUtils();
-    }
-
 
     @Override
     public  ReturnResultUtils put(String key, Object value) {
