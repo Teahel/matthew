@@ -82,12 +82,11 @@ public class ArticleController {
      * @param article 修改内容
      * @return  返回修改后的文章list
      */
-     @RequestMapping(value = "/update")
+    @RequestMapping(value = "/update")
     public ReturnResultUtils updateArticle(@RequestBody Article article){
         if(StringUtils.isEmpty(article.getArticleid())){
             return ReturnResultUtils.error(111,"修改数据ID 不能为空");
         }
-
+        return articleService.updateArticle(article);
     }
-
 }

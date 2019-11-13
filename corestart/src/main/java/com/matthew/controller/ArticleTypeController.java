@@ -44,4 +44,26 @@ public class ArticleTypeController {
         returnResultUtils.ok(map);
         return returnResultUtils;
     }
+
+    /**
+     * 删除文章类型
+     * @param typeid
+     * @return 成功 返回删除后的list
+     *         失败 返回错误信息
+     */
+    @RequestMapping(value = "/delete")
+    public ReturnResultUtils deleteArticleType(@RequestParam String typeid){
+        return articleTypeService.deleteArticleType(typeid);
+    }
+
+    /**
+     * 查询所有文章类型
+     * @return  类型list
+     */
+    @RequestMapping(value = "/findList")
+    public ReturnResultUtils findList(){
+        return articleTypeService.findList();
+    }
+
+
 }
