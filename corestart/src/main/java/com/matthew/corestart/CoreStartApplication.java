@@ -12,7 +12,7 @@ import org.mybatis.spring.annotation.MapperScan;
 @SpringBootApplication
 public class CoreStartApplication extends SpringBootServletInitializer {
 
-    // 重写 configure方法
+    // 重写 configure方法（打包）
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application)
     {

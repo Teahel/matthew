@@ -1,12 +1,14 @@
 package com.matthew.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.matthew.Utils.ReturnResultUtils;
 import com.matthew.entity.Article;
 import com.matthew.mapper.ArticleMapper;
 import com.matthew.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.BitSet;
 import java.util.List;
 
 /**
@@ -28,4 +30,47 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper,Article> imple
         List<Article> list = this.list();
         return list;
     }
+
+    /**
+     * 保存文章
+     * @param article 文章实体
+     * @return 返回结果
+     *       成功返回true
+     *       错误返回false
+     */
+    @Override
+    public boolean addArticle(Article article) {
+        return this.save(article);
+    }
+
+    /**
+     * 删除文章
+     * @param article_id 文章id
+     * @return 返回结果
+     *       成功返回true
+     *       错误返回false
+     */
+    @Override
+    public boolean deleteArticle(String article_id) {
+        return this.removeById(article_id);
+    }
+
+    /**
+     * 修改文章
+     * @param article 修改内容
+     * @return 返回结果
+     *       成功返回true
+     *       错误返回false
+     */
+    @Override
+    public ReturnResultUtils updateArticle(Article article) {
+        boolean flag = this.updateById(article);
+        ReturnResultUtils resultUtils = new ReturnResultUtils();
+        if(flag){
+            resultUtils.putList(findArticleLists());
+            return resultUtils;
+        }
+        return  ReturnResultUtils.error(111,"修改失败");
+    }
+
 }

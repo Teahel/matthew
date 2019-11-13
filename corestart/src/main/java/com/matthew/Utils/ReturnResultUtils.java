@@ -13,32 +13,36 @@ import java.util.Map;
 public class ReturnResultUtils extends HashMap<String,Object> {
     private static final long serialVersionUID = 1L;
 
-    public ReturnResultUtils (){
-
-    }
-    public  ReturnResultUtils error(int code, String msg) {
-        ReturnResultUtils r = new ReturnResultUtils();
-        put("code", 500);
-        put("msg", msg);
-        return r;
+    public ReturnResultUtils() {
+        put("code", 000);
+        put("msg", "success");
     }
 
-    public  ReturnResultUtils ok(int code,String msg) {
+    public static ReturnResultUtils error(int code, String msg) {
         ReturnResultUtils r = new ReturnResultUtils();
-        r.put("code", 200);
+        r.put("code", code);
         r.put("msg", msg);
         return r;
     }
 
-    public  ReturnResultUtils ok(Map<String, Object> map) {
+    public static ReturnResultUtils ok(String msg) {
         ReturnResultUtils r = new ReturnResultUtils();
-        put("msg",map.get("msg"));
-        put("list",map.get("list"));
+        r.put("msg", msg);
         return r;
     }
 
+    public static ReturnResultUtils ok(Map<String, Object> map) {
+        ReturnResultUtils r = new ReturnResultUtils();
+        r.putAll(map);
+        return r;
+    }
+
+    public static ReturnResultUtils ok() {
+        return new ReturnResultUtils();
+    }
+
     @Override
-    public  ReturnResultUtils put(String key, Object value) {
+    public ReturnResultUtils put(String key, Object value) {
         super.put(key, value);
         return this;
     }
@@ -86,6 +90,5 @@ public class ReturnResultUtils extends HashMap<String,Object> {
         super.putAll(map);
         return this;
     }
-
 
 }
