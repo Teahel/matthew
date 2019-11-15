@@ -13,6 +13,10 @@ public class WebInfoController {
     @Autowired
     private WebInfoService webInfoService;
 
+    /**
+     * 查询网站信息
+     * @return 网站
+     */
     @RequestMapping(value = "/find",method = RequestMethod.POST)
     public ReturnResultUtils findWebInfo(){
         ReturnResultUtils returnResultUtils = new ReturnResultUtils();
