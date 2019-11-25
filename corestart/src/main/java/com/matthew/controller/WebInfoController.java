@@ -23,4 +23,6 @@ public class WebInfoController {
         returnResultUtils.putObject(webInfoService.findWebInfo());
         return returnResultUtils;
     }
+
+
 }

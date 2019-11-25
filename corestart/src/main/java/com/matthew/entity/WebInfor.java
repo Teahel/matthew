@@ -30,17 +30,17 @@ public class WebInfor implements Serializable {
     /**
      * 网站名称
      */
-    private String webName;
+    private String webname;
 
     /**
      * 开始时间
      */
-    private String startTime;
+    private String start_time;
 
     /**
      * 著作人
      */
-    private String madeName;
+    private String made_name;
 
     /**
      * 版本
@@ -50,5 +50,5 @@ public class WebInfor implements Serializable {
     /**
      * 代码地址
      */
-    private String codeAddress;
+    private String code_address;
 }

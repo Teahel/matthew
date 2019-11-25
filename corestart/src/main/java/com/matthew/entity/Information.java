@@ -31,6 +31,6 @@ public class Information implements Serializable {
     /**
      *网址
      */
-    private String websiteUrl;
+    private String website_url;
 
 }
