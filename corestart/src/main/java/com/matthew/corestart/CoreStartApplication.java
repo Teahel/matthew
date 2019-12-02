@@ -6,6 +6,7 @@ import org.mybatis.spring.annotation.MapperScan;
         import org.springframework.boot.builder.SpringApplicationBuilder;
         import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
         import org.springframework.context.annotation.ComponentScan;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @MapperScan("com.matthew.**.mapper")
 @ComponentScan("com.matthew")
