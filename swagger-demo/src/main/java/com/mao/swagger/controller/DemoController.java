@@ -52,7 +52,7 @@ public class DemoController {
     @ApiOperation(value = "查询用户" ,  notes="查询用户")
     @ApiImplicitParams({
         @ApiImplicitParam(name = "userId", value = "用户标识", required = true, paramType = "query", dataType = "String")
-})
+    })
     @RequestMapping(value="/queryUser",method=RequestMethod.GET)
     public ResObject queryUser(@RequestParam("userId") String userId){
     	System.out.println("queryUser:::"+userId);
