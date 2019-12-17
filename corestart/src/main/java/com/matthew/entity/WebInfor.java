@@ -25,7 +25,7 @@ public class WebInfor implements Serializable {
      * webinfor主键
      */
     @TableId(type=IdType.UUID)
-    private String webinforid;
+    private String webinfor_id;
 
     /**
      * 网站名称
@@ -45,7 +45,7 @@ public class WebInfor implements Serializable {
     /**
      * 版本
      */
-    private String version;
+    private String web_version;
 
     /**
      * 代码地址

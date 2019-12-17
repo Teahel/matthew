@@ -10,6 +10,14 @@ package com.matthew;
 public class Lambda {
 
     public static void main(String args[]){
-        
+        Lambda lambda =  new Lambda();
+
+        System.out.println(lambda.reserverString("2019-10-20"));
+
+    }
+
+    public String reserverString(String s){
+        String b = s.replaceAll("-","").substring(2,8);
+        return b;
     }
 }

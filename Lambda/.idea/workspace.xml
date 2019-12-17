@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e28b6537-0f3a-4099-9cfb-67bf127cc537" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../algorithm/src/LeetCode/easy/LongestCommonPrefix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../algorithm/src/LeetCode/easy/Palindrome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../algorithm/src/LeetCode/easy/RomanNumerals.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../algorithm/src/LeetCode/easy/RomanToInt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../algorithm/src/LeetCode/easy/numAdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../algorithm/src/LeetCode/easy/reverseInt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lambda/com/matthew/socket/OOOO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lambda/com/matthew/socket/OOOO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lambda/com/matthew/socket/t11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lambda/com/matthew/socket/t11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../swagger-demo/src/main/java/com/mao/swagger/controller/DemoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../swagger-demo/src/main/java/com/mao/swagger/controller/DemoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/matthew/Lambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/matthew/Lambda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../corestart/src/main/java/com/matthew/controller/AnnouncementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../corestart/src/main/java/com/matthew/controller/AnnouncementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../corestart/src/main/java/com/matthew/entity/WebInfor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../corestart/src/main/java/com/matthew/entity/WebInfor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../corestart/src/main/java/com/matthew/service/impl/AnnouncementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../corestart/src/main/java/com/matthew/service/impl/AnnouncementServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../corestart/src/main/java/com/matthew/service/impl/ArticleTypleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../corestart/src/main/java/com/matthew/service/impl/ArticleTypleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../corestart/src/main/java/com/matthew/service/impl/WebInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../corestart/src/main/java/com/matthew/service/impl/WebInfoServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +80,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RestServicesNavigator">
     <treeState>
@@ -91,7 +100,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SubtractionOfTime">
+  <component name="RunManager" selected="Application.Lambda">
     <configuration name="CloneFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.matthew.interfaces.CloneFile" />
       <module name="Lambda" />
@@ -106,13 +115,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DateTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.matthew.interfaces.DateTime" />
+    <configuration name="Lambda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.matthew.Lambda" />
       <module name="Lambda" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.matthew.interfaces.*" />
+          <option name="PATTERN" value="com.matthew.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -248,20 +257,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DateTime" />
       <item itemvalue="Application.CloneFile" />
       <item itemvalue="Application.t10" />
       <item itemvalue="Application.t11" />
       <item itemvalue="Application.SubtractionOfTime" />
       <item itemvalue="Tomcat Server.Unnamed" />
+      <item itemvalue="Application.Lambda" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Lambda" />
         <item itemvalue="Application.SubtractionOfTime" />
         <item itemvalue="Application.t11" />
         <item itemvalue="Application.t10" />
         <item itemvalue="Application.CloneFile" />
-        <item itemvalue="Application.DateTime" />
       </list>
     </recent_temporary>
   </component>
@@ -287,6 +296,10 @@
       <workItem from="1575536337781" duration="345000" />
       <workItem from="1575599575342" duration="1512000" />
       <workItem from="1575938662019" duration="6000" />
+      <workItem from="1575966594650" duration="1025000" />
+      <workItem from="1575969436897" duration="686000" />
+      <workItem from="1576028208936" duration="255000" />
+      <workItem from="1576551994677" duration="1133000" />
     </task>
     <servers />
   </component>

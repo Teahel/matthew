@@ -40,6 +40,7 @@ public class ArticleTypleServiceImpl extends ServiceImpl<ArticleTypeMapper,Artic
         ReturnResultUtils returnResultUtils = new ReturnResultUtils();
        boolean flag = this.removeById(typeid);
        if(flag){
+
            returnResultUtils.putList(this.list());
        }
        return ReturnResultUtils.error(111,"删除文章类型失败");

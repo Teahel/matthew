@@ -7,6 +7,8 @@ import com.matthew.mapper.AnnouncementMapper;
 import com.matthew.service.AnnouncementService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @Author: ltj
  * @Description:
@@ -33,7 +35,7 @@ public class AnnouncementServiceImpl extends ServiceImpl<AnnouncementMapper,Anno
 
     /**
      * 删除公告
-     * @param announcement
+     * @param --announcement
      * @return  成功返回 新的list
      *          失败返回 错误码
      */
@@ -54,7 +56,8 @@ public class AnnouncementServiceImpl extends ServiceImpl<AnnouncementMapper,Anno
      */
     public ReturnResultUtils findList(){
         ReturnResultUtils returnResultUtils = new ReturnResultUtils();
-        return  returnResultUtils.putList(this.list());
+        List<Announcement> list = this.list();
+        return  returnResultUtils.putList(list);
     }
 
 }

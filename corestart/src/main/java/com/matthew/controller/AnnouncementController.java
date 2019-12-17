@@ -62,7 +62,8 @@ public class AnnouncementController {
      * @return 成功 返回新的list
      */
     @ApiOperation(value = "查询所有的公告信息",notes = "显示公告信息")
-   public ReturnResultUtils findList(){
+    @RequestMapping("/findList")
+    public ReturnResultUtils findList(){
        return  announcementService.findList();
    }
 
