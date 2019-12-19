@@ -11,16 +11,45 @@ public class LongestCommonPrefix {
 
     public static void main(String args[]){
         LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
-
-        String str[] = {"flower","flow","flight"};
+        String str[] = {"c","c"}; //["a","a","b"]
+        //String str[] = {"a"};
         System.out.println( longestCommonPrefix.longestCommonPrefix(str));
-
     }
 
     public String longestCommonPrefix(String[] strs) {
         int num = 0;
         String prefix = "";
         boolean flag = false;
+        int  oneNum = 0;
+        String temp = "";
+        String tempOne= "";
+        String testTemp[] = new String[strs.length];
+        for(int l=0;l<strs.length;l++){
+            if(strs[l].length()==1){
+                testTemp[oneNum]=strs[l];
+                oneNum++;
+                temp=strs[l];
+
+            }
+            if(strs[l].length()==0){
+                return "";
+            }
+        }
+        if(oneNum==1){
+            return  temp;
+        } else if(oneNum>1) {
+             boolean fs = false;
+             for(int o=0;o<oneNum-1;o++){
+                 if(testTemp[o]!=testTemp[o+1]){
+                     fs = true;
+                 }
+             }
+             if(fs){
+                 return "";
+             } else {
+                 return testTemp[0];
+             }
+        }
         for(int i=0;i<strs.length-1;i++){
            for(int j=i+1;j<strs.length;j++){
                char a[] =strs[i].toCharArray();
@@ -32,11 +61,11 @@ public class LongestCommonPrefix {
                            if(num>0){
                                if(num>s+1){
                                    num = s+1;
-                                   prefix = strs[i].substring(0,s);
+                                   prefix = strs[i].substring(0,num);
                                }
                            } else {
                                num = s+1;
-                               prefix = strs[i].substring(0,s);
+                               prefix = strs[i].substring(0,num);
                            }
                        } else {
                            flag =false;
@@ -52,11 +81,11 @@ public class LongestCommonPrefix {
                            if(num>0){
                                if(num<s+1){
                                    num = s+1;
-                                   prefix = strs[i].substring(0,s);
+                                   prefix = strs[i].substring(0,num);
                                }
                            } else {
                                num = s+1;
-                               prefix = strs[i].substring(0,s);
+                               prefix = strs[i].substring(0,num);
                            }
                        } else {
                            flag =false;
