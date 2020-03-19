@@ -8,18 +8,9 @@ package LeetCode.easy;
  */
 public class RomanNumerals {
     public static void main(String args[]){
-        /*
-        for(int i=0;i<10;i++){
-            System.out.println('数字：'+i);
-            if(i==4){
-                i = i+2;
-                System.out.println('数字：'+i);
-            }
-            "LVIII"
-        }*/
         RomanNumerals romanNumerals = new RomanNumerals();
         System.out.println(romanNumerals.romanToInt("LVIII"));
-
+        System.out.println("ssfdfdf");
     }
 
     public int romanToInt (String s) {
