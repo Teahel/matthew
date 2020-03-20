@@ -1,11 +1,12 @@
 package org.teahel.pathxmlapplicationcontext;
 
 import org.teahel.annotion.Autowired;
+import org.teahel.annotion.Component;
+import org.teahel.annotion.Controller;
 import org.teahel.annotion.Service;
 import org.teahel.uitls.ClassParseUtil;
 
 import java.lang.reflect.Field;
-import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -62,8 +63,11 @@ public class PathXmlApplicationContext {
          */
         for(Field field : declaredFields){
             Autowired exAutowired = field.getAnnotation(Autowired.class);
+            Component component = field.getAnnotation(Component.class);
+            Controller controller = field.getAnnotation(Controller.class);
+
             /* 存在注解的属性，在容器中寻找该对象。*/
-            if(exAutowired!=null){
+            if(exAutowired!=null||component!=null||controller!=null){
                 String beanId = field.getName();
                 Object bean = getBean(beanId);
                 /* 在该类class中，给具有注解的属性，赋予(set)对象*/
