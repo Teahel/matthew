@@ -1,9 +1,6 @@
 package org.teahel.pathxmlapplicationcontext;
 
-import org.teahel.annotion.Autowired;
-import org.teahel.annotion.Component;
-import org.teahel.annotion.Controller;
-import org.teahel.annotion.Service;
+import org.teahel.annotion.*;
 import org.teahel.uitls.ClassParseUtil;
 
 import java.lang.reflect.Field;
@@ -65,9 +62,10 @@ public class PathXmlApplicationContext {
             Autowired exAutowired = field.getAnnotation(Autowired.class);
             Component component = field.getAnnotation(Component.class);
             Controller controller = field.getAnnotation(Controller.class);
+            Repository repository = field.getAnnotation(Repository.class);
 
-            /* 存在注解的属性，在容器中寻找该对象。*/
-            if(exAutowired!=null||component!=null||controller!=null){
+            /* 存在注解(Autowired、Component、Controller)的属性，在容器中寻找该对象。*/
+            if(exAutowired!=null||component!=null||controller!=null||repository!=null){
                 String beanId = field.getName();
                 Object bean = getBean(beanId);
                 /* 在该类class中，给具有注解的属性，赋予(set)对象*/
