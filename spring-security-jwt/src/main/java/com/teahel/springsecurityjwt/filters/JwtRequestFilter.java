@@ -1,6 +1,8 @@
 package com.teahel.springsecurityjwt.filters;
 
 import com.teahel.springsecurityjwt.SecurityConfigurer;
+import com.teahel.springsecurityjwt.repository.UserRepository;
+import com.teahel.springsecurityjwt.securityconfig.CustomUserDetails;
 import com.teahel.springsecurityjwt.services.MyUserDetailsService;
 import com.teahel.springsecurityjwt.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +27,7 @@ import java.io.IOException;
 public class JwtRequestFilter extends OncePerRequestFilter {
 
     @Autowired
-    private MyUserDetailsService myUserDetailsService;
+    private UserRepository userRepository;
 
     @Autowired
     private JwtUtil jwtUtil;
@@ -44,7 +46,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         }
 
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-            UserDetails userDetails = this.myUserDetailsService.loadUserByUsername(username);
+            UserDetails userDetails = new CustomUserDetails(userRepository.findByUsername(username));
             if (jwtUtil.validateToken(jwt,userDetails)) {
                 UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken =
                         new UsernamePasswordAuthenticationToken(userDetails,null,userDetails.getAuthorities());

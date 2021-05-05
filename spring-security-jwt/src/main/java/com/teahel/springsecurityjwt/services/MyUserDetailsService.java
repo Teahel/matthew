@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author li.teahel@gmail.com
  * @date 2021/4/28
  */
-@Service
+//@Service
 public class MyUserDetailsService implements UserDetailsService {
 
     /**
